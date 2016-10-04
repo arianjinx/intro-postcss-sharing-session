@@ -75,9 +75,10 @@ gulp.task('css', function () {
     require('postcss-url')({
       url: 'rebase'
     })], {
-    from: 'src/css/*.css',
-    to: 'dist/css/*.css'
-  })))
+      from: './src/css/*.css',
+      to: './dist/css/*.css'
+    }
+  )))
   .pipe($.if(PRODUCTION, $.postcss([require('cssnano')])))
   .pipe(gulp.dest('dist/css/'));
 });
