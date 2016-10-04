@@ -1,6 +1,81 @@
+/* CSS nano */
+
+/* - normalize selectors */
+h1::before, h1:before {
+    /* - reduce shorthand even further */
+    margin: 10px 20px 10px 20px;
+
+    /* - reduce color values */
+    color: #FF0000;
+
+    /* - drop outdated vendor prefixes */
+    -webkit-border-radius: 16px;
+    border-radius: 16px;
+
+    /* - remove duplicated properties */
+    font-weight: normal;
+    font-weight: normal;
+
+    /* - reduce position values */
+    background-position: bottom right;
+}
+
 /* Sprites */
-.kemantapan {
-    background: red;
+$color-black-lighter: #787878;
+$color-white-darker: #F8F8F8;
+$color-gray-lighter: #E6E6E6;
+$color-gray: #D5D5D5;
+
+.bw-icon-toped {
+    background-image: url('../img/sprites/toped.png#bridge-widget-sprite');
+
+    @media (min--moz-device-pixel-ratio: 1.5),
+        (-o-min-device-pixel-ratio: 3/2),
+        (-webkit-min-device-pixel-ratio: 1.5),
+        (min-device-pixel-ratio: 1.5),
+        (min-resolution: 144dpi),
+        (min-resolution: 1.5dppx) {
+        background-image: url('../img/sprites/toped@2x.png#bridge-widget-sprite');
+    }
+}
+
+.bw-icon-tiket {
+    background-image: url('../img/sprites/tiket.png#bridge-widget-sprite');
+
+    @media (min--moz-device-pixel-ratio: 1.5),
+        (-o-min-device-pixel-ratio: 3/2),
+        (-webkit-min-device-pixel-ratio: 1.5),
+        (min-device-pixel-ratio: 1.5),
+        (min-resolution: 144dpi),
+        (min-resolution: 1.5dppx) {
+        background-image: url('../img/sprites/tiket@2x.png#bridge-widget-sprite');
+    }
+}
+
+.bw-icon-listrik {
+    background-image: url('../img/sprites/listrik.png#bridge-widget-sprite');
+
+    @media (min--moz-device-pixel-ratio: 1.5),
+        (-o-min-device-pixel-ratio: 3/2),
+        (-webkit-min-device-pixel-ratio: 1.5),
+        (min-device-pixel-ratio: 1.5),
+        (min-resolution: 144dpi),
+        (min-resolution: 1.5dppx) {
+        background-image: url('../img/sprites/listrik@2x.png#bridge-widget-sprite');
+    }
+}
+
+.bw-icon-pulsa {
+    background-image: url('../img/sprites/pulsa.png#bridge-widget-sprite');
+
+    @media (min--moz-device-pixel-ratio: 1.5),
+        (-o-min-device-pixel-ratio: 3/2),
+        (-webkit-min-device-pixel-ratio: 1.5),
+        (min-device-pixel-ratio: 1.5),
+        (min-resolution: 144dpi),
+        (min-resolution: 1.5dppx) {
+        background-image: url('../img/sprites/pulsa@2x.png#bridge-widget-sprite');
+    }
 }
 
 /* SVG inline */

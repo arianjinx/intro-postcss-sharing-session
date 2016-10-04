@@ -31,18 +31,17 @@ gulp.task('server', function (done) {
   done();
 });
 
+gulp.task('images', function () {
+  return gulp.src('src/img/**/*')
+  .pipe(gulp.dest('./dist/img'));
+});
+
 gulp.task('css', function () {
   var CONFIG = [
     require('postcss-import'),
     require('postcss-simple-vars'),
     require('postcss-nested'),
     require('postcss-assets'),
-    require('postcss-easysprites')({
-      imagePath: './src/img/sprites',
-      spritePath: './dist/img',
-      stylesheetPath: './dist/css'
-    }),
-    require('postcss-at2x'),
     require('postcss-inline-svg'),
     require('postcss-svgo'),
     require('doiuse')({
@@ -57,6 +56,12 @@ gulp.task('css', function () {
         console.log(usageInfo.message);
       }
     }),
+    require('postcss-easysprites')({
+      imagePath: './src/img/sprites',
+      spritePath: './dist/img',
+      stylesheetPath: './dist/css'
+    }),
+    require('postcss-at2x'),
     require('autoprefixer'),
     require('stylefmt')
   ];
@@ -72,4 +77,4 @@ gulp.task('watch', function () {
   gulp.watch(['*.html']).on('change', gulp.series(browser.reload));
 });
 
-gulp.task('default', gulp.series('clean', 'css', 'server', 'watch'));
+gulp.task('default', gulp.series('clean', 'images', 'css', 'server', 'watch'));
