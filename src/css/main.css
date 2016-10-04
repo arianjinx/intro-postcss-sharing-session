@@ -20,23 +20,25 @@ body {
 /* CSS nano */
 
 /* - normalize selectors */
+
 h1::before, h1:before {
+
     /* - reduce shorthand even further */
     margin: 10px 20px 10px 20px;
-
-    /* - reduce color values */
-    color: #FF0000;
 
     /* - drop outdated vendor prefixes */
     -webkit-border-radius: 16px;
     border-radius: 16px;
 
+    /* - reduce position values */
+    background-position: bottom right;
+
+    /* - reduce color values */
+    color: #FF0000;
+
     /* - remove duplicated properties */
     font-weight: normal;
     font-weight: normal;
-
-    /* - reduce position values */
-    background-position: bottom right;
 }
 
 /* Sprites */
@@ -45,10 +47,18 @@ $color-white-darker: #F8F8F8;
 $color-gray-lighter: #E6E6E6;
 $color-gray: #D5D5D5;
 
+@custom-media --retina (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi);
+
+.bw-icon {
+    display: block;
+    width: 40px;
+    height: 40px;
+}
+
 .bw-icon-toped {
     background-image: url('../img/sprites/toped.png#bridge-widget-sprite');
 
-    @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+    @media (--retina) {
         background-image: url('../img/sprites/toped@2x.png#bridge-widget-sprite');
     }
 }
@@ -56,7 +66,7 @@ $color-gray: #D5D5D5;
 .bw-icon-tiket {
     background-image: url('../img/sprites/tiket.png#bridge-widget-sprite');
 
-    @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+    @media (--retina) {
         background-image: url('../img/sprites/tiket@2x.png#bridge-widget-sprite');
     }
 }
@@ -64,7 +74,7 @@ $color-gray: #D5D5D5;
 .bw-icon-listrik {
     background-image: url('../img/sprites/listrik.png#bridge-widget-sprite');
 
-    @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+    @media (--retina) {
         background-image: url('../img/sprites/listrik@2x.png#bridge-widget-sprite');
     }
 }
@@ -72,7 +82,7 @@ $color-gray: #D5D5D5;
 .bw-icon-pulsa {
     background-image: url('../img/sprites/pulsa.png#bridge-widget-sprite');
 
-    @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+    @media (--retina) {
         background-image: url('../img/sprites/pulsa@2x.png#bridge-widget-sprite');
     }
 }

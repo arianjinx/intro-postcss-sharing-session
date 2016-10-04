@@ -52,17 +52,17 @@ gulp.task('css', function () {
         'Android 2.3',
         'iOS 7.1'
       ],
-      ignoreFiles: ['**/normalize.css'],
-      onFeatureUsage: function (usageInfo) {
-        console.log(usageInfo.message);
-      }
+      ignoreFiles: ['**/normalize.css']
+      // onFeatureUsage: function (usageInfo) {
+      //   console.log(usageInfo.message);
+      // }
     }),
     require('postcss-easysprites')({
       imagePath: './src/img/sprites',
       spritePath: './src/img',
       stylesheetPath: './dist/css'
     }),
-    require('postcss-at2x'),
+    require('postcss-custom-media'),
     require('autoprefixer'),
     require('postcss-reporter'),
     require('stylefmt')
