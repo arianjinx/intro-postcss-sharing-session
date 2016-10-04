@@ -1,0 +1,55 @@
+{
+  "name": "intro-postcss-sharing-session",
+  "version": "1.0.0",
+  "description": "Source code buat sharing session Product function Tokopedia",
+  "main": "gulpfile.js",
+  "scripts": {
+    "start": "gulp",
+    "start:production": "gulp --production",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arianraptor/intro-postcss-sharing-session.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/arianraptor/intro-postcss-sharing-session/issues"
+  },
+  "homepage": "https://github.com/arianraptor/intro-postcss-sharing-session#readme",
+  "devDependencies": {
+    "autoprefixer": "^6.3.7",
+    "browser-sync": "^2.16.0",
+    "cssnano": "^3.7.3",
+    "doiuse": "^2.5.0",
+    "gulp": "github:gulpjs/gulp#4.0",
+    "gulp-if": "^2.0.1",
+    "gulp-imagemin": "^3.0.2",
+    "gulp-load-plugins": "^1.2.4",
+    "gulp-postcss": "^6.1.1",
+    "gulp-sourcemaps": "^1.6.0",
+    "postcss": "^5.1.0",
+    "postcss-assets": "^4.1.0",
+    "postcss-at2x": "^2.0.0",
+    "postcss-easysprites": "^0.1.7",
+    "postcss-import": "^8.1.2",
+    "postcss-inline-svg": "^2.0.1",
+    "postcss-load-plugins": "^2.0.0-alpha4",
+    "postcss-nested": "^1.0.0",
+    "postcss-simple-vars": "^3.0.0",
+    "postcss-svgo": "^2.1.4",
+    "rimraf": "^2.5.3",
+    "stylefmt": "^4.3.1",
+    "stylelint": "^7.3.1",
+    "stylelint-config-standard": "^13.0.2",
+    "yargs": "^4.8.1"
+  },
+  "semistandard": {
+    "globals": [
+      "$",
+      "jQuery"
+    ]
+  }
+}

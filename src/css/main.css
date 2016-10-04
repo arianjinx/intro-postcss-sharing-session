@@ -1,0 +1,95 @@
+/* Sprites */
+.kemantapan {
+    background: red;
+}
+
+/* SVG inline */
+
+.tab-icon {
+    display: block;
+    margin: 0 auto 5px;
+    width: 60px;
+    height: 60px;
+    background-size: 60px 60px;
+}
+
+.ti-pulsa {
+    background-image: svg-load(../img/svg/pulsa.svg);
+
+    .active &,
+    li:hover & {
+        background-image: svg-load(../img/svg/pulsa-active.svg);
+    }
+}
+
+.ti-paket-data {
+    background-image: svg-load(../img/svg/paket-data.svg);
+
+    .active &,
+    li:hover & {
+        background-image: svg-load(../img/svg/paket-data-active.svg);
+    }
+}
+
+.ti-pln {
+    background-image: svg-load(../img/svg/token-listrik.svg);
+
+    .active &,
+    li:hover & {
+        background-image: svg-load(../img/svg/token-listrik-active.svg);
+    }
+}
+
+.ti-others {
+    background-image: svg-load(../img/svg/others.svg);
+
+    .active &,
+    li:hover & {
+        background-image: svg-load(../img/svg/others-active.svg);
+    }
+}
+
+.ti-saldo {
+    background-image: svg-load(../img/svg/saldo.svg);
+
+    .active &,
+    li:hover & {
+        background-image: svg-load(../img/svg/saldo-active.svg);
+    }
+}
+
+.ti-bpjs {
+    background-image: svg-load(../img/svg/bpjs.svg);
+
+    .active &,
+    li:hover & {
+        background-image: svg-load(../img/svg/bpjs-active.svg);
+    }
+}
+
+.ti-air {
+    background-image: svg-load(../img/svg/air.svg);
+
+    .active &,
+    li:hover & {
+        background-image: svg-load(../img/svg/air-active.svg);
+    }
+}
+
+.ti-multifinance {
+    background-image: svg-load(../img/svg/multifinance.svg);
+
+    .active &,
+    li:hover & {
+        background-image: svg-load(../img/svg/multifinance-active.svg);
+    }
+}
+
+.ti-game {
+    background-image: svg-load(../img/svg/game.svg);
+
+    .active &,
+    li:hover & {
+        background-image: svg-load(../img/svg/game-active.svg);
+    }
+}
