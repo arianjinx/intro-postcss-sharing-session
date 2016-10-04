@@ -45,6 +45,7 @@ gulp.task('css', function () {
     require('postcss-inline-svg'),
     require('postcss-svgo'),
     require('doiuse')({
+      // Get these data from Google Analytics
       browsers: [
         'Chrome 30',
         'Firefox 38',
@@ -59,7 +60,7 @@ gulp.task('css', function () {
     }),
     require('postcss-easysprites')({
       imagePath: './src/img/sprites',
-      spritePath: './src/img',
+      spritePath: './dist/img',
       stylesheetPath: './dist/css'
     }),
     require('postcss-custom-media'),
@@ -73,8 +74,10 @@ gulp.task('css', function () {
   .pipe($.if(PRODUCTION, $.postcss([
     require('postcss-url')({
       url: 'rebase'
-    })], {to: './dist/css/folder/*.css'}
-  )))
+    })], {
+    from: 'src/css/*.css',
+    to: 'dist/css/*.css'
+  })))
   .pipe($.if(PRODUCTION, $.postcss([require('cssnano')])))
   .pipe(gulp.dest('dist/css/'));
 });

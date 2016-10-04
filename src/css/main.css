@@ -7,7 +7,9 @@
 $color-green: #42B549;
 
 body {
-    background: $color-green;
+    display: flex;
+    transform: translateX(-1%);
+    border: 5px solid $color-green;
 }
 
 .component {
