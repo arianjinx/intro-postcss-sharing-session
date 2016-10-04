@@ -1,3 +1,13 @@
+/* Import and Nesting */
+@import "normalize.css";
+
+.component {
+    &__children {
+        display: inline-block;
+        height: 30px;
+    }
+}
+
 /* CSS nano */
 
 /* - normalize selectors */

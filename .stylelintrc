@@ -4,6 +4,7 @@
         "indentation": 4,
         "color-named": "always-where-possible",
         "color-hex-case": "upper",
-        "declaration-colon-space-after": "always-single-line"
+        "declaration-colon-space-after": "always-single-line",
+        'declaration-block-no-ignored-properties': "true"
     }
 }
