@@ -66,6 +66,7 @@ gulp.task('css', function () {
     require('postcss-custom-media'),
     require('autoprefixer'),
     require('postcss-reporter'),
+    require('postcss-importantly'),
     require('stylefmt')
   ];
 

@@ -34,6 +34,7 @@
     "postcss-custom-media": "^5.0.1",
     "postcss-easysprites": "^0.1.7",
     "postcss-import": "^8.1.2",
+    "postcss-importantly": "0.0.7",
     "postcss-inline-svg": "^2.0.1",
     "postcss-load-plugins": "^2.0.0-alpha4",
     "postcss-nested": "^1.0.0",
